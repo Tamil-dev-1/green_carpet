@@ -1,0 +1,432 @@
+.hero-section {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* FRAME */
+
+.hero-frame {
+  width: 100%;
+  min-height: 95vh;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* GLASS */
+
+.glass-overlay {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  background: rgba(50, 60, 50, 0.22);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  z-index: 1;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.hero-navbar {
+  position: relative;
+  z-index: 10;
+  padding: 15px 25px;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: white !important;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #9ec100;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.book-btn {
+  background: #9ec100;
+  border: none;
+  color: white;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  min-height: 82vh;
+
+  display: flex;
+  align-items: center;
+}
+
+/* ROW CENTER ALIGN */
+
+.hero-content .row {
+  width: 100%;
+  align-items: center;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-height: 82vh;
+
+  padding-left: 70px;
+  padding-right: 40px;
+
+  position: relative;
+  z-index: 5;
+
+  margin-top: -20px;
+}
+
+/* TITLE */
+
+.hero-title-wrap {
+  margin-bottom: 26px;
+  margin-top: 0;
+}
+
+.hero-title-fill,
+.hero-title-outline {
+  font-size: clamp(45px, 5vw, 85px);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.hero-title-fill {
+  color: white;
+}
+
+.hero-title-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  margin-top: 5px;
+}
+
+/* DESCRIPTION */
+
+.hero-desc {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 420px;
+  margin-bottom: 35px;
+}
+
+/* BUTTONS */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
+}
+
+.explore-btn {
+  background: #9ec100;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.watch-video {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: white;
+  cursor: pointer;
+}
+
+.play-btn {
+  width: 48px;
+  height: 48px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* SOCIAL */
+
+.social-icons {
+  display: flex;
+  gap: 22px;
+}
+
+.social-icons i {
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.hero-right {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 82vh;
+
+  margin-top: -20px;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  perspective: 1000px;
+}
+
+.destination-card {
+  width: 75px;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  filter: brightness(0.6) grayscale(0.3);
+  box-shadow: -8px 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.destination-card.active {
+  width: 120px;
+  height: 320px;
+  border: 2px solid #9ec100;
+  filter: brightness(1);
+}
+
+/* =========================
+   DIAMONDS
+========================= */
+
+.diamond-indicators {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.diamond {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  transform: rotate(45deg);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.diamond.active {
+  background: white;
+  opacity: 1;
+}
+
+/* =========================
+   ARROWS
+========================= */
+
+.arrow-buttons {
+  position: absolute;
+  right: 50px;
+  bottom: 40px;
+  display: flex;
+  gap: 12px;
+}
+
+.arrow-btn {
+  width: 52px;
+  height: 46px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  color: white;
+  font-size: 24px;
+  backdrop-filter: blur(5px);
+}
+
+.arrow-btn.active {
+  background: #9ec100;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+  .glass-overlay {
+    width: 100%;
+  }
+
+  .hero-left {
+    padding: 60px 30px;
+    text-align: center;
+    align-items: center;
+
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .hero-right {
+    padding-bottom: 60px;
+
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .hero-title-wrap {
+    margin-top: 0;
+  }
+
+  .hero-title-fill,
+  .hero-title-outline {
+    font-size: clamp(45px, 10vw, 70px);
+    letter-spacing: 5px;
+  }
+
+  .cards-wrap {
+    transform: scale(0.9);
+  }
+
+  .diamond-indicators {
+    display: none;
+  }
+
+  .arrow-buttons {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .hero-section {
+    padding: 15px;
+  }
+
+  .hero-left {
+    padding: 40px 20px;
+  }
+
+  .hero-title-fill,
+  .hero-title-outline {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .hero-desc {
+    font-size: 15px;
+  }
+
+  .destination-card.active {
+    width: 90px;
+    height: 250px;
+  }
+
+  .destination-card {
+    width: 55px;
+    height: 200px;
+  }
+
+  .cards-wrap {
+    gap: 8px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+
+
+/* Glassmorphism effect */
+
+/* =========================
+   GLASS DROPDOWN
+========================= */
+
+.glass-dropdown {
+  background: rgba(30, 40, 30, 0.35) !important;
+  backdrop-filter: blur(22px) saturate(1.4) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 12px !important;
+  padding: 8px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 1.5px 0 rgba(255,255,255,0.08) inset !important;
+  min-width: 190px;
+  margin-top: 8px !important;
+}
+
+.glass-dropdown-item {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 16px !important;
+  border-radius: 8px !important;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.3px;
+}
+
+.glass-dropdown-item:hover,
+.glass-dropdown-item:focus {
+  background: rgba(158, 193, 0, 0.22) !important;
+  color: #c8f000 !important;
+}
+
+/* Dropdown toggle arrow color */
+.hero-navbar .dropdown-toggle::after {
+  border-top-color: rgba(255, 255, 255, 0.7);
+}

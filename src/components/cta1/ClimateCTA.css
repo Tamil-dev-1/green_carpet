@@ -1,0 +1,399 @@
+.gcc-cta-section {
+  position: relative;
+  overflow: hidden;
+  background: #fff7d8;
+  padding: 60px 0;
+}
+
+/* BACKGROUND CIRCLE */
+.gcc-cta-section::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  border: 70px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  top: -260px;
+  right: -240px;
+}
+
+/* BADGE */
+.gcc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 20px;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.7);
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 24px;
+}
+
+.gcc-dot {
+  width: 10px;
+  height: 10px;
+  background: #01ab1a;
+  border-radius: 50%;
+}
+
+/* TITLE */
+.gcc-title {
+  font-size: 3.7rem;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #111;
+
+  max-width: 580px;
+}
+
+.gcc-title span {
+  color: #01ab1a;
+}
+
+/* TEXT */
+.gcc-text {
+  margin-top: 24px;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  color: #555;
+  max-width: 520px;
+}
+
+.gcc-text-second {
+  margin-top: 20px;
+}
+
+/* BUTTONS */
+.gcc-buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.gcc-join-btn {
+  border: none;
+  background: #01ab1a;
+  color: white;
+
+  padding: 16px 28px;
+  border-radius: 18px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  transition: 0.3s ease;
+}
+
+.gcc-join-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(1, 171, 26, 0.2);
+}
+
+.gcc-arrow {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: white;
+  color: #01ab1a;
+
+  border-radius: 50%;
+}
+
+.gcc-partner-link {
+  color: #111;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+.gcc-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+/* CARDS */
+.gcc-card {
+  position: absolute;
+  overflow: hidden;
+
+  border-radius: 24px;
+  background: white;
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.gcc-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LEFT CARD */
+.gcc-card-main {
+  width: 250px;
+  height: 250px;
+
+  top: 80px;
+  left: 50px;
+
+  z-index: 2;
+}
+
+/* RIGHT CARD */
+.gcc-card-side {
+  width: 250px;
+  height: 250px;
+
+  top: 160px;
+  right: 40px;
+}
+
+/* PROFILE */
+.gcc-profile {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+}
+
+.gcc-avatar {
+  width: 44px !important;
+  height: 44px !important;
+
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.gcc-profile h5 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.gcc-profile p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* TAG */
+.gcc-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+
+  padding: 10px 16px;
+  border-radius: 40px;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* FLOATING LINK */
+.gcc-floating-link {
+  position: absolute;
+  top: 120px;
+  left: 180px;
+
+  background: white;
+
+  padding: 12px 18px;
+  border-radius: 14px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  color: #01ab1a;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  z-index: 5;
+}
+
+/* FLOATING CIRCLES */
+.gcc-circle {
+  position: absolute;
+
+  border-radius: 50%;
+
+  background-size: cover;
+  background-position: center;
+
+  border: 4px solid white;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gcc-c1 {
+  width: 46px;
+  height: 46px;
+
+  top: 10px;
+  left: 230px;
+
+  background-image: url("https://randomuser.me/api/portraits/men/11.jpg");
+}
+
+.gcc-c2 {
+  width: 58px;
+  height: 58px;
+
+  top: 40px;
+  right: 80px;
+
+  background-image: url("https://randomuser.me/api/portraits/women/22.jpg");
+}
+
+.gcc-c3 {
+  width: 52px;
+  height: 52px;
+
+  bottom: 40px;
+  left: 120px;
+
+  background-image: url("https://randomuser.me/api/portraits/men/32.jpg");
+}
+
+.gcc-c4 {
+  width: 42px;
+  height: 42px;
+
+  bottom: 100px;
+  left: 260px;
+
+  background-image: url("https://randomuser.me/api/portraits/women/68.jpg");
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+
+  .gcc-title {
+    font-size: 3.1rem;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .gcc-title {
+    font-size: 2.7rem;
+  }
+
+  .gcc-image-wrapper {
+    margin-top: 60px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .gcc-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .gcc-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gcc-image-wrapper {
+    height: 460px;
+  }
+
+  .gcc-card-main,
+  .gcc-card-side {
+    width: 190px;
+    height: 190px;
+  }
+
+  .gcc-card-main {
+    left: 0;
+  }
+
+  .gcc-card-side {
+    right: 0;
+    top: 140px;
+  }
+
+  .gcc-floating-link {
+    left: 100px;
+    top: 100px;
+    font-size: 11px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .gcc-cta-section {
+    padding: 50px 0;
+  }
+
+  .gcc-title {
+    font-size: 1.9rem;
+  }
+
+  .gcc-join-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gcc-image-wrapper {
+    height: 380px;
+  }
+
+  .gcc-card-main,
+  .gcc-card-side {
+    width: 150px;
+    height: 150px;
+  }
+
+  .gcc-card-main {
+    top: 40px;
+  }
+
+  .gcc-card-side {
+    top: 140px;
+  }
+
+  .gcc-floating-link {
+    left: 60px;
+    top: 90px;
+
+    max-width: 170px;
+    overflow: hidden;
+  }
+
+  .gcc-circle {
+    display: none;
+  }
+}

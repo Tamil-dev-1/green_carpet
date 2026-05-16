@@ -1,0 +1,163 @@
+.cta-wrapper {
+  width: 100%;
+  /* min-height: 100vh; */
+  background: #000;
+  overflow: hidden;
+  padding: 60px 0;
+}
+
+/* MAIN BOX */
+.cta-box {
+  position: relative;
+  background: #f3eef1;
+  border-radius: 0px;
+  min-height: 340px;
+  overflow: hidden;
+  padding: 60px;
+  transition: all 0.5s ease;
+}
+
+/* OVERLAY CIRCLE */
+.cta-overlay {
+  position: absolute;
+  width: 750px;
+  height: 750px;
+  background: #01AB1A;
+  border-radius: 50%;
+  top: -380px;
+  right: -320px;
+  transition: all 0.8s ease;
+  z-index: 1;
+}
+
+/* HOVER EFFECT */
+.cta-box:hover .cta-overlay {
+  transform: scale(1.2);
+  background: #FF4081;
+}
+
+/* CONTENT */
+.cta-content {
+  position: relative;
+  z-index: 3;
+}
+
+.cta-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.05;
+  color: #01AB1A;
+  margin-bottom: 80px;
+  transition: all 0.5s ease;
+}
+
+/* BUTTON */
+.cta-btn {
+  background: transparent;
+  border: none;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #111;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+/* UNDERLINE */
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 100%;
+  height: 4px;
+  background: #01AB1A;
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+  color: #01AB1A;
+}
+
+/* HOVER TEXT CHANGE */
+.cta-box:hover .cta-title {
+  color: #000;
+}
+
+.cta-box:hover .cta-btn::after {
+  background: #000;
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 992px) {
+
+  .cta-box {
+    padding: 50px 40px;
+    min-height: 350px;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+  }
+
+  .cta-btn {
+    font-size: 2.2rem;
+  }
+
+  .cta-overlay {
+    width: 600px;
+    height: 600px;
+    top: -300px;
+    right: -280px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .cta-wrapper {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .cta-box {
+    padding: 40px 25px;
+    min-height: 300px;
+  }
+
+  .cta-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+
+  .cta-btn {
+    font-size: 1.8rem;
+  }
+
+  .cta-overlay {
+    width: 420px;
+    height: 420px;
+    top: -180px;
+    right: -180px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .cta-title {
+    font-size: 2.3rem;
+  }
+
+  .cta-btn {
+    font-size: 1.4rem;
+  }
+
+  .cta-overlay {
+    width: 320px;
+    height: 320px;
+    top: -140px;
+    right: -150px;
+  }
+}
