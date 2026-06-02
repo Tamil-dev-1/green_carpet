@@ -6,29 +6,29 @@ import Img4 from "../../assets/images/hero/img4.jpg";
 const destinations = [
   {
     id: 0,
-    title: "ICELAND",
-    subtitle: "ESCAPE",
+    title: "LOREM ",
+    subtitle: "IPSUM",
     desc: "Discover dramatic landscapes and serene beauty.",
     img: Img1,
   },
   {
     id: 1,
-    title: "AMAZON",
-    subtitle: "JUNGLE",
+    title: "LOREM ",
+    subtitle: "IPSUM",
     desc: "Immerse yourself in the world's most diverse ecosystem.",
     img: "https://images.pexels.com/photos/20954871/pexels-photo-20954871.jpeg",
   },
   {
     id: 2,
-    title: "SWISS",
-    subtitle: "ALPS",
+    title: "LOREM ",
+    subtitle: "IPSUM",
     desc: "Experience the majestic peaks and crystal clear lakes.",
     img: "https://images.pexels.com/photos/35196/water-plant-green-fine-layers.jpg",
   },
   {
     id: 3,
-    title: "BALI",
-    subtitle: "RETREAT",
+    title: "LOREM ",
+    subtitle: "IPSUM",
     desc: "Find peace in the lush terraces and tropical beaches.",
     img: Img4,
   },
@@ -41,27 +41,27 @@ const PlayIcon = () => (
 );
 
 const dropdowns = {
-  Explore: [
+  Program: [
     "Destinations",
     "Adventure Tours",
     "Eco Travel",
     "Hidden Gems",
   ],
-  Trips: [
+  Blogs: [
     "My Trips",
     "Plan a Trip",
     "Group Travel",
     "Custom Packages",
   ],
 
-   About: [
+  About: [
     "My Trips",
     "Plan a Trip",
     "Group Travel",
     "Custom Packages",
   ],
 
-   Contact: [
+  Contact: [
     "My Trips",
     "Plan a Trip",
     "Group Travel",
@@ -69,18 +69,13 @@ const dropdowns = {
   ],
 };
 
-
-
 export default function Hero() {
   const [index, setIndex] = useState(0);
 
-  // DROPDOWN STATE
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  // DROPDOWN REF
   const dropdownRef = useRef(null);
 
-  // CLOSE DROPDOWN WHEN CLICK OUTSIDE
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -122,26 +117,22 @@ export default function Hero() {
 
   return (
     <section
-      className="hero-section"
+      className="gc-hero-section"
       style={{
         backgroundImage: `url(${dest.img})`,
       }}
     >
-      <div className="hero-frame">
+      <div className="gc-hero-frame">
 
-        {/* Glass Overlay */}
-        <div className="glass-overlay"></div>
+        <div className="gc-glass-overlay"></div>
 
-        {/* Navbar */}
-        <nav className="navbar navbar-expand-lg hero-navbar">
+        <nav className="navbar navbar-expand-lg gc-hero-navbar">
           <div className="container-fluid px-lg-4">
 
-            {/* Logo */}
-            <a className="navbar-brand logo" href="#">
+            <a className="navbar-brand gc-logo" href="#">
               <span>Green</span>Carpet
             </a>
 
-            {/* Mobile Toggle */}
             <button
               className="navbar-toggler"
               type="button"
@@ -151,7 +142,6 @@ export default function Hero() {
               <span className="navbar-toggler-icon"></span>
             </button>
 
-            {/* Menu */}
             <div
               className="collapse navbar-collapse justify-content-center"
               id="heroNav"
@@ -163,8 +153,8 @@ export default function Hero() {
 
                 {[
                   "Home",
-                  "Explore",
-                  "Trips",
+                  "Program",
+                  "Blogs",
                   "About",
                   "Contact",
                 ].map((item) => {
@@ -182,7 +172,7 @@ export default function Hero() {
                     >
                       {!hasDropdown ? (
                         <a
-                          className="nav-link"
+                          className="gc-nav-link"
                           href="#"
                         >
                           {item}
@@ -190,7 +180,7 @@ export default function Hero() {
                       ) : (
                         <>
                           <button
-                            className="nav-link dropdown-toggle custom-dropdown-btn"
+                            className="gc-nav-link dropdown-toggle gc-custom-dropdown-btn"
                             onClick={() =>
                               toggleDropdown(item)
                             }
@@ -200,7 +190,7 @@ export default function Hero() {
                           </button>
 
                           <ul
-                            className={`dropdown-menu glass-dropdown ${
+                            className={`dropdown-menu gc-glass-dropdown ${
                               openDropdown === item
                                 ? "show"
                                 : ""
@@ -210,7 +200,7 @@ export default function Hero() {
                               (sub) => (
                                 <li key={sub}>
                                   <a
-                                    className="dropdown-item glass-dropdown-item"
+                                    className="dropdown-item gc-glass-dropdown-item"
                                     href="#"
                                   >
                                     {sub}
@@ -227,49 +217,43 @@ export default function Hero() {
               </ul>
             </div>
 
-            {/* Button */}
-            <button className="book-btn">
+            <button className="gc-book-btn">
               Book Now
             </button>
 
           </div>
         </nav>
 
-        {/* Main Content */}
-        <div className="container-fluid hero-content">
+        <div className="container-fluid gc-hero-content">
           <div className="row h-100">
 
-            {/* LEFT SIDE */}
-            <div className="col-lg-6 hero-left">
+            <div className="col-lg-6 gc-hero-left">
 
-              {/* Heading */}
-              <div className="hero-title-wrap">
+              <div className="gc-hero-title-wrap">
 
-                <h1 className="hero-title-fill">
+                <h1 className="gc-hero-title-fill">
                   {dest.title}
                 </h1>
 
-                <h1 className="hero-title-outline">
+                <h1 className="gc-hero-title-outline">
                   {dest.subtitle}
                 </h1>
 
               </div>
 
-              {/* Description */}
-              <p className="hero-desc">
+              <p className="gc-hero-desc">
                 {dest.desc}
               </p>
 
-              {/* Buttons */}
-              <div className="hero-actions">
+              <div className="gc-hero-actions">
 
-                <button className="explore-btn">
+                <button className="gc-explore-btn">
                   Explore
                 </button>
 
-                <div className="watch-video">
+                <div className="gc-watch-video">
 
-                  <div className="play-btn">
+                  <div className="gc-play-btn">
                     <PlayIcon />
                   </div>
 
@@ -279,8 +263,7 @@ export default function Hero() {
 
               </div>
 
-              {/* Social Icons */}
-              <div className="social-icons">
+              <div className="gc-social-icons">
                 <i className="bi bi-facebook"></i>
                 <i className="bi bi-instagram"></i>
                 <i className="bi bi-twitter-x"></i>
@@ -290,24 +273,21 @@ export default function Hero() {
 
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className="col-lg-6 hero-right">
+            <div className="col-lg-6 gc-hero-right">
 
-              {/* Indicators */}
-              <div className="diamond-indicators">
+              <div className="gc-diamond-indicators">
                 {destinations.map((_, i) => (
                   <div
                     key={i}
                     onClick={() => setIndex(i)}
-                    className={`diamond ${
+                    className={`gc-diamond ${
                       i === index ? "active" : ""
                     }`}
                   ></div>
                 ))}
               </div>
 
-              {/* Cards */}
-              <div className="cards-wrap">
+              <div className="gc-cards-wrap">
 
                 {destinations.map((d, i) => {
                   const isActive = i === index;
@@ -330,7 +310,7 @@ export default function Hero() {
                     <div
                       key={d.id}
                       onClick={() => setIndex(i)}
-                      className={`destination-card ${
+                      className={`gc-destination-card ${
                         isActive ? "active" : ""
                       }`}
                       style={{
@@ -347,19 +327,18 @@ export default function Hero() {
 
               </div>
 
-              {/* Arrows */}
-              <div className="arrow-buttons">
+              <div className="gc-arrow-buttons">
 
                 <button
                   onClick={prev}
-                  className="arrow-btn"
+                  className="gc-arrow-btn"
                 >
                   ‹
                 </button>
 
                 <button
                   onClick={next}
-                  className="arrow-btn active"
+                  className="gc-arrow-btn active"
                 >
                   ›
                 </button>
@@ -374,5 +353,3 @@ export default function Hero() {
     </section>
   );
 }
-
-

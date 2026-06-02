@@ -1,7 +1,7 @@
 .cta-wrapper {
   width: 100%;
   /* min-height: 100vh; */
-  background: #000;
+  background: #ECEAE5;
   overflow: hidden;
   padding: 60px 0;
 }
@@ -33,7 +33,7 @@
 /* HOVER EFFECT */
 .cta-box:hover .cta-overlay {
   transform: scale(1.2);
-  background: #FF4081;
+  background: #01AB1A;
 }
 
 /* CONTENT */

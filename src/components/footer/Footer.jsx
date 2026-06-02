@@ -347,10 +347,10 @@ export default function Footer() {
             <div className="gc-tagline-row">
               <div className={`gc-tagline ${visible ? "show" : ""}`}>
                 <h2>
-                  Join the Selva Insider Club —{" "}
-                  <strong>Be the first to</strong>
+                  Contrary to popular belief, Lorem —{" "}
+                  <strong> is not simply</strong>
                   <br />
-                  uncover new trails and secret spots.
+                  It has roots in a piece of classical
                 </h2>
               </div>
 

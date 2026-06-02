@@ -1,4 +1,4 @@
-.hero-section {
+.gc-hero-section {
   min-height: 100vh;
   width: 100%;
   background-size: cover;
@@ -10,9 +10,7 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* FRAME */
-
-.hero-frame {
+.gc-hero-frame {
   width: 100%;
   min-height: 95vh;
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -21,9 +19,7 @@
   position: relative;
 }
 
-/* GLASS */
-
-.glass-overlay {
+.gc-glass-overlay {
   position: absolute;
   inset: 0;
   width: 50%;
@@ -33,34 +29,33 @@
   z-index: 1;
 }
 
-/* =========================
-   NAVBAR
-========================= */
-
-.hero-navbar {
+.gc-hero-navbar {
   position: relative;
   z-index: 10;
   padding: 15px 25px;
 }
 
-.logo {
+.gc-logo {
   font-size: 28px;
   font-weight: 800;
   color: white !important;
   text-decoration: none;
 }
 
-.logo span {
+.gc-logo span {
   color: #9ec100;
 }
 
-.nav-link {
+.gc-nav-link {
   color: rgba(255, 255, 255, 0.85) !important;
   font-size: 15px;
   font-weight: 500;
+  text-decoration: none;
+  background: transparent;
+  border: none;
 }
 
-.book-btn {
+.gc-book-btn {
   background: #9ec100;
   border: none;
   color: white;
@@ -69,55 +64,38 @@
   font-weight: 700;
 }
 
-/* =========================
-   MAIN CONTENT
-========================= */
-
-.hero-content {
+.gc-hero-content {
   position: relative;
   z-index: 5;
   min-height: 82vh;
-
   display: flex;
   align-items: center;
 }
 
-/* ROW CENTER ALIGN */
-
-.hero-content .row {
+.gc-hero-content .row {
   width: 100%;
   align-items: center;
 }
 
-/* =========================
-   LEFT SIDE
-========================= */
-
-.hero-left {
+.gc-hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   min-height: 82vh;
-
   padding-left: 70px;
   padding-right: 40px;
-
   position: relative;
   z-index: 5;
-
   margin-top: -20px;
 }
 
-/* TITLE */
-
-.hero-title-wrap {
+.gc-hero-title-wrap {
   margin-bottom: 26px;
   margin-top: 0;
 }
 
-.hero-title-fill,
-.hero-title-outline {
+.gc-hero-title-fill,
+.gc-hero-title-outline {
   font-size: clamp(45px, 5vw, 85px);
   font-weight: 900;
   line-height: 0.95;
@@ -126,19 +104,17 @@
   margin: 0;
 }
 
-.hero-title-fill {
+.gc-hero-title-fill {
   color: white;
 }
 
-.hero-title-outline {
+.gc-hero-title-outline {
   color: transparent;
   -webkit-text-stroke: 2px white;
   margin-top: 5px;
 }
 
-/* DESCRIPTION */
-
-.hero-desc {
+.gc-hero-desc {
   color: rgba(255, 255, 255, 0.85);
   font-size: 17px;
   line-height: 1.8;
@@ -146,9 +122,7 @@
   margin-bottom: 35px;
 }
 
-/* BUTTONS */
-
-.hero-actions {
+.gc-hero-actions {
   display: flex;
   align-items: center;
   gap: 25px;
@@ -156,7 +130,7 @@
   flex-wrap: wrap;
 }
 
-.explore-btn {
+.gc-explore-btn {
   background: #9ec100;
   border: none;
   color: white;
@@ -165,7 +139,7 @@
   font-weight: 700;
 }
 
-.watch-video {
+.gc-watch-video {
   display: flex;
   align-items: center;
   gap: 14px;
@@ -173,7 +147,7 @@
   cursor: pointer;
 }
 
-.play-btn {
+.gc-play-btn {
   width: 48px;
   height: 48px;
   border: 1.5px solid white;
@@ -183,47 +157,34 @@
   justify-content: center;
 }
 
-/* SOCIAL */
-
-.social-icons {
+.gc-social-icons {
   display: flex;
   gap: 22px;
 }
 
-.social-icons i {
+.gc-social-icons i {
   color: white;
   font-size: 22px;
   cursor: pointer;
 }
 
-/* =========================
-   RIGHT SIDE
-========================= */
-
-.hero-right {
+.gc-hero-right {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   min-height: 82vh;
-
   margin-top: -20px;
 }
 
-/* =========================
-   CARDS
-========================= */
-
-.cards-wrap {
+.gc-cards-wrap {
   display: flex;
   align-items: center;
   gap: 12px;
   perspective: 1000px;
 }
 
-.destination-card {
+.gc-destination-card {
   width: 75px;
   height: 260px;
   background-size: cover;
@@ -235,18 +196,14 @@
   box-shadow: -8px 14px 30px rgba(0, 0, 0, 0.4);
 }
 
-.destination-card.active {
+.gc-destination-card.active {
   width: 120px;
   height: 320px;
   border: 2px solid #9ec100;
   filter: brightness(1);
 }
 
-/* =========================
-   DIAMONDS
-========================= */
-
-.diamond-indicators {
+.gc-diamond-indicators {
   position: absolute;
   right: 25px;
   top: 50%;
@@ -256,7 +213,7 @@
   gap: 18px;
 }
 
-.diamond {
+.gc-diamond {
   width: 14px;
   height: 14px;
   border: 2px solid white;
@@ -265,16 +222,12 @@
   cursor: pointer;
 }
 
-.diamond.active {
+.gc-diamond.active {
   background: white;
   opacity: 1;
 }
 
-/* =========================
-   ARROWS
-========================= */
-
-.arrow-buttons {
+.gc-arrow-buttons {
   position: absolute;
   right: 50px;
   bottom: 40px;
@@ -282,7 +235,7 @@
   gap: 12px;
 }
 
-.arrow-btn {
+.gc-arrow-btn {
   width: 52px;
   height: 46px;
   border: none;
@@ -293,124 +246,24 @@
   backdrop-filter: blur(5px);
 }
 
-.arrow-btn.active {
+.gc-arrow-btn.active {
   background: #9ec100;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 991px) {
-
-  .glass-overlay {
-    width: 100%;
-  }
-
-  .hero-left {
-    padding: 60px 30px;
-    text-align: center;
-    align-items: center;
-
-    margin-top: 0;
-    min-height: auto;
-  }
-
-  .hero-right {
-    padding-bottom: 60px;
-
-    margin-top: 0;
-    min-height: auto;
-  }
-
-  .hero-title-wrap {
-    margin-top: 0;
-  }
-
-  .hero-title-fill,
-  .hero-title-outline {
-    font-size: clamp(45px, 10vw, 70px);
-    letter-spacing: 5px;
-  }
-
-  .cards-wrap {
-    transform: scale(0.9);
-  }
-
-  .diamond-indicators {
-    display: none;
-  }
-
-  .arrow-buttons {
-    right: 50%;
-    transform: translateX(50%);
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 576px) {
-
-  .hero-section {
-    padding: 15px;
-  }
-
-  .hero-left {
-    padding: 40px 20px;
-  }
-
-  .hero-title-fill,
-  .hero-title-outline {
-    font-size: 42px;
-    line-height: 1;
-  }
-
-  .hero-desc {
-    font-size: 15px;
-  }
-
-  .destination-card.active {
-    width: 90px;
-    height: 250px;
-  }
-
-  .destination-card {
-    width: 55px;
-    height: 200px;
-  }
-
-  .cards-wrap {
-    gap: 8px;
-  }
-
-  .social-icons {
-    justify-content: center;
-  }
-}
-
-
-
-/* Glassmorphism effect */
-
-/* =========================
-   GLASS DROPDOWN
-========================= */
-
-.glass-dropdown {
+.gc-glass-dropdown {
   background: rgba(30, 40, 30, 0.35) !important;
   backdrop-filter: blur(22px) saturate(1.4) !important;
   -webkit-backdrop-filter: blur(22px) saturate(1.4) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   border-radius: 12px !important;
   padding: 8px !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), 0 1.5px 0 rgba(255,255,255,0.08) inset !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35),
+    0 1.5px 0 rgba(255,255,255,0.08) inset !important;
   min-width: 190px;
   margin-top: 8px !important;
 }
 
-.glass-dropdown-item {
+.gc-glass-dropdown-item {
   color: rgba(255, 255, 255, 0.88) !important;
   font-size: 14px;
   font-weight: 500;
@@ -420,13 +273,91 @@
   letter-spacing: 0.3px;
 }
 
-.glass-dropdown-item:hover,
-.glass-dropdown-item:focus {
+.gc-glass-dropdown-item:hover,
+.gc-glass-dropdown-item:focus {
   background: rgba(158, 193, 0, 0.22) !important;
   color: #c8f000 !important;
 }
 
-/* Dropdown toggle arrow color */
-.hero-navbar .dropdown-toggle::after {
+.gc-hero-navbar .dropdown-toggle::after {
   border-top-color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 991px) {
+
+  .gc-glass-overlay {
+    width: 100%;
+  }
+
+  .gc-hero-left {
+    padding: 60px 30px;
+    text-align: center;
+    align-items: center;
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .gc-hero-right {
+    padding-bottom: 60px;
+    margin-top: 0;
+    min-height: auto;
+  }
+
+  .gc-hero-title-fill,
+  .gc-hero-title-outline {
+    font-size: clamp(45px, 10vw, 70px);
+    letter-spacing: 5px;
+  }
+
+  .gc-cards-wrap {
+    transform: scale(0.9);
+  }
+
+  .gc-diamond-indicators {
+    display: none;
+  }
+
+  .gc-arrow-buttons {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 576px) {
+
+  .gc-hero-section {
+    padding: 15px;
+  }
+
+  .gc-hero-left {
+    padding: 40px 20px;
+  }
+
+  .gc-hero-title-fill,
+  .gc-hero-title-outline {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .gc-hero-desc {
+    font-size: 15px;
+  }
+
+  .gc-destination-card.active {
+    width: 90px;
+    height: 250px;
+  }
+
+  .gc-destination-card {
+    width: 55px;
+    height: 200px;
+  }
+
+  .gc-cards-wrap {
+    gap: 8px;
+  }
+
+  .gc-social-icons {
+    justify-content: center;
+  }
 }

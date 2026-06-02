@@ -7,7 +7,7 @@ const About = () => {
       <div className="container custom-container shadow-sm">
         {/* Background Decorative Shapes */}
         <div className="bg-shape-left"></div>
-        <div className="bg-shape-right"></div>
+        {/* <div className="bg-shape-right"></div> */}
 
         <div className="row align-items-center g-0 position-relative" style={{ zIndex: 1 }}>
           
