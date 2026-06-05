@@ -9,6 +9,8 @@ import WomenRise from '../../components/womenRise/WomenRise'
 import Newsroom from '../../components/news_room/NewsRoom'
 // import EducationGallery from '../../components/gallery_marquee/EducationGallery'
 import ImgCarousel from '../../components/imgCarousel/ImgCarousel'
+import SDG from '../../components/sdg_goals/SDG'
+import Chairman from '../../components/chairman/Chairman'
 
 
 const Home = () => {
@@ -24,6 +26,8 @@ const Home = () => {
       <CTA2 />
       <Newsroom />
       {/* <EducationGallery /> */}
+      <SDG />
+      <Chairman />
       
     </div>
   )

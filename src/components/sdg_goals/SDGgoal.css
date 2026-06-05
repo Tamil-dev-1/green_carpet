@@ -1,0 +1,165 @@
+.goal-section {
+  padding: 80px 0;
+  background: #f5f5f5;
+}
+
+/* HEADER */
+
+.goal-header {
+  margin-bottom: 60px;
+}
+
+.goal-subtitle {
+  display: block;
+  color: #1e7c60;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.goal-heading {
+  font-size: 45px;
+  font-weight: 800;
+  color: #10211d;
+  margin-bottom: 20px;
+}
+
+.goal-description {
+  max-width: 650px;
+  margin: auto;
+  color: #687773;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* GRID */
+
+.goal-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* CARD */
+
+.goal-card {
+  width: 140px;
+  height: 140px;
+  border-radius: 14px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.goal-number {
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+
+.goal-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 12px;
+
+  background: rgba(0,0,0,0.15);
+
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  transform: scale(1.1);
+}
+
+.goal-overlay span {
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.goal-card:hover .goal-overlay {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.goal-card:hover .goal-number {
+  opacity: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 992px) {
+  .goal-heading {
+    font-size: 44px;
+  }
+
+  .goal-description {
+    font-size: 17px;
+  }
+
+  .goal-card {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 576px) {
+
+  .goal-section {
+    padding: 60px 0;
+  }
+
+  .goal-heading {
+    font-size: 32px;
+  }
+
+  .goal-description {
+    font-size: 15px;
+  }
+
+  .goal-grid {
+    gap: 10px;
+  }
+
+  .goal-card {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+  }
+
+  .goal-number {
+    font-size: 16px;
+  }
+
+  .goal-overlay span {
+    font-size: 9px;
+    line-height: 1.2;
+  }
+}
