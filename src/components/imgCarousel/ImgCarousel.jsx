@@ -49,7 +49,7 @@ export default function FashionHero() {
         .fw {
           display: flex;
           align-items: stretch;
-          min-height: 100vh;
+       
           font-family: 'Jost', sans-serif;
           padding: 2.5rem 3rem;
           gap: 2.5rem;
@@ -228,7 +228,7 @@ export default function FashionHero() {
             flex-direction: column;
             padding: 1.4rem 1.2rem;
             gap: 1.4rem;
-            min-height: 100svh;
+           
           }
           .lp {
             width: 100%;

@@ -104,7 +104,7 @@ export default function ClimateChange() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         .cc-root {
-          min-height: 100vh;
+          
           background: #eceae5;
           font-family: 'DM Sans', sans-serif;
           display: flex;

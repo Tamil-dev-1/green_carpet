@@ -441,7 +441,7 @@ export default function ChairmanMessage() {
                 }}
               />
 
-              {/* Floating glass name badge */}
+              {/* Floating glass name badge */}          
               <div className="panel-badge">
                 <span className="badge
                 

@@ -11,6 +11,10 @@ import Newsroom from '../../components/news_room/NewsRoom'
 import ImgCarousel from '../../components/imgCarousel/ImgCarousel'
 import SDG from '../../components/sdg_goals/SDG'
 import Chairman from '../../components/chairman/Chairman'
+import GetInvolved from '../../components/getInvolved/GetInvolved'
+import Partners from '../../components/partners/Partners'
+// getInvlovedImge part
+// import heroBg from './assets/your-banner.jpg';
 
 
 const Home = () => {
@@ -28,7 +32,9 @@ const Home = () => {
       {/* <EducationGallery /> */}
       <SDG />
       <Chairman />
-      
+      <GetInvolved />
+      {/* <GetInvolved /><CommunitySection bannerImage={heroBg} /> */}
+      <Partners />
     </div>
   )
 }

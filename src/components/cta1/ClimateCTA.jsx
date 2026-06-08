@@ -5,7 +5,7 @@ const CTASection = () => {
   return (
     <section className="gcc-cta-section">
       <div className="container">
-        <div className="row align-items-center min-vh-100">
+        <div className="row align-items-center ">
 
           {/* LEFT CONTENT */}
           <div className="col-lg-6 mb-5 mb-lg-0">

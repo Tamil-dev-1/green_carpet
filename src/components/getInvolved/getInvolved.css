@@ -1,0 +1,248 @@
+/* CommunitySection.css */
+/* Add to public/index.html <head>:
+   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/> */
+
+:root {
+  --cs-green:      #01AB1A;
+  --cs-green-glow: rgba(1, 171, 26, 0.35);
+  --cs-dark-card:  rgba(13, 15, 24, 0.82);
+  --cs-dark-border:rgba(255, 255, 255, 0.07);
+}
+
+/* ── Banner – background-image is set inline via prop ── */
+.cs-banner {
+  width: 100%;
+  padding: 80px 24px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* subtle dark overlay for readability */
+.cs-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 100%);
+  pointer-events: none;
+}
+
+/* ── Card wrapper ── */
+.cs-section-wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+/* ── Glassmorphism card ── */
+.cs-card {
+  background: var(--cs-dark-card);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid var(--cs-dark-border);
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.cs-card-inner {
+  display: grid;
+  grid-template-columns: minmax(210px, 1fr) 1px 1fr;
+}
+
+/* ── Left panel ── */
+.cs-left-panel {
+  padding: 2.5rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.cs-eyebrow {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.cs-headline {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.cs-headline-accent {
+  color: var(--cs-green);
+  text-shadow: 0 0 30px var(--cs-green-glow);
+}
+
+/* ── Vertical divider ── */
+.cs-v-divider {
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent 5%,
+    rgba(1, 171, 26, 0.22) 30%,
+    rgba(1, 171, 26, 0.22) 70%,
+    transparent 95%
+  );
+  flex-shrink: 0;
+}
+
+/* ── Right panel ── */
+.cs-right-panel {
+  padding: 1.8rem 2rem 1.8rem 2.2rem;
+}
+
+.cs-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  height: 100%;
+}
+
+/* ── Link item ── */
+.cs-link-item {
+  padding: 1rem 1rem 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.cs-link-item:hover,
+.cs-link-item.hovered {
+  background: rgba(1, 171, 26, 0.08);
+  border-left-color: var(--cs-green);
+}
+
+.cs-link-item:nth-child(n+4) {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cs-link-item:not(:nth-child(3n+1)) {
+  border-left: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cs-link-item:not(:nth-child(3n+1)):hover,
+.cs-link-item:not(:nth-child(3n+1)).hovered {
+  border-left-color: var(--cs-green);
+}
+
+/* ── Icon box ── */
+.cs-link-icon {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.cs-link-item:hover .cs-link-icon,
+.cs-link-item.hovered .cs-link-icon {
+  background: rgba(1, 171, 26, 0.22);
+  box-shadow: 0 0 14px var(--cs-green-glow);
+}
+
+.link-svg {
+  width: 15px;
+  height: 15px;
+  fill: rgba(255, 255, 255, 0.7);
+  transition: fill 0.2s;
+  display: block;
+}
+
+.cs-link-item:hover .link-svg,
+.cs-link-item.hovered .link-svg {
+  fill: var(--cs-green);
+}
+
+/* ── Text ── */
+.cs-link-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.cs-link-desc {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.45;
+}
+
+/* ── CTA link ── */
+.cs-link-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.71rem;
+  font-weight: 600;
+  color: var(--cs-green);
+  margin-top: 0.1rem;
+  text-decoration: none;
+  transition: gap 0.15s;
+}
+
+.cs-link-cta:hover {
+  gap: 6px;
+  color: var(--cs-green);
+}
+
+.cta-chevron {
+  width: 9px;
+  height: 9px;
+  display: block;
+}
+
+/* ── Mobile ── */
+@media (max-width: 767px) {
+  .cs-banner { padding: 48px 16px; }
+
+  .cs-card-inner { grid-template-columns: 1fr; }
+  .cs-v-divider  { display: none; }
+
+  .cs-left-panel {
+    padding: 2rem 1.5rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .cs-right-panel { padding: 1.4rem; }
+
+  .cs-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .cs-link-item:nth-child(n+4)          { border-top: none; }
+  .cs-link-item:not(:nth-child(3n+1))   { border-left: none; }
+  .cs-link-item:nth-child(n+3)          { border-top: 1px solid rgba(255,255,255,.06); }
+  .cs-link-item:nth-child(even)         { border-left: 1px solid rgba(255,255,255,.06); }
+  .cs-link-item:hover,
+  .cs-link-item.hovered                 { border-left-color: var(--cs-green); }
+}
+
+@media (max-width: 400px) {
+  .cs-links-grid { grid-template-columns: 1fr; }
+  .cs-link-item  { border-left: none !important; }
+  .cs-link-item:not(:first-child) {
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+}
