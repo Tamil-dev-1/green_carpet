@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { PiYarnThin } from "react-icons/pi";
 
 const styles = `
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
@@ -345,7 +346,7 @@ export default function WomenRiseSection() {
             {/* RIGHT: Image */}
             <div className="col-12 col-lg-6 wr-image-col">
               <div
-                className={`wr-image-wrap wr-fade ${visible ? "visible" : ""}`}
+             className={`wr-image-wrap wr-fade ${visible ? "visible" : ""}`}
                 style={{ transitionDelay: "0.25s" }}
               >
                 <img

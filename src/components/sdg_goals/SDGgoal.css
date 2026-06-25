@@ -1,165 +1,260 @@
-.goal-section {
-  padding: 80px 0;
-  background: #f5f5f5;
+/* ============================================
+   Sustainability Goals — SDG Marquee Styles
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* ── Section Wrapper ── */
+.sdg-section {
+  background: #ffffff;
+  padding: 48px 0 40px;
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  position: relative;
 }
 
-/* HEADER */
-
-.goal-header {
-  margin-bottom: 60px;
-}
-
-.goal-subtitle {
-  display: block;
-  color: #1e7c60;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-.goal-heading {
-  font-size: 45px;
+/* ── Section Title ── */
+.sdg-section__title {
+  text-align: center;
+  font-size: 1rem;
   font-weight: 800;
-  color: #10211d;
-  margin-bottom: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin-bottom: 28px;
 }
 
-.goal-description {
-  max-width: 650px;
-  margin: auto;
-  color: #687773;
-  font-size: 20px;
-  line-height: 1.7;
+/* ── Marquee Track ── */
+.sdg-marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
-/* GRID */
+/* Fade edges */
+.sdg-marquee-wrapper::before,
+.sdg-marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.sdg-marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 30%, transparent);
+}
+.sdg-marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 30%, transparent);
+}
 
-.goal-grid {
+.sdg-marquee-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
+  gap: 12px;
+  width: max-content;
+  animation: sdgScroll 38s linear infinite;
+  padding: 8px 6px 12px;
 }
 
-/* CARD */
+.sdg-marquee-track:hover {
+  animation-play-state: paused;
+}
 
-.goal-card {
-  width: 140px;
-  height: 140px;
-  border-radius: 14px;
+@keyframes sdgScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
+/* ── Individual SDG Card ── */
+.sdg-card {
+  width: 118px;
+  height: 118px;
+  border-radius: 10px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px 10px 10px;
+  flex-shrink: 0;
+  cursor: pointer;
   position: relative;
   overflow: hidden;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
 
-.goal-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+.sdg-card:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.20);
 }
 
-.goal-number {
-  color: white;
-  font-size: 22px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-/* HOVER */
-
-.goal-overlay {
-  position: absolute;
-  inset: 0;
-
+/* ── Card Number + Label ── */
+.sdg-card__header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  gap: 5px;
+  width: 100%;
+}
 
+.sdg-card__number {
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.95);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.sdg-card__label {
+  font-size: 0.45rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  padding-top: 2px;
+}
+
+/* ── Card Icon ── */
+.sdg-card__icon {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.sdg-card__icon svg,
+.sdg-card__icon img {
+  width: 52px;
+  height: 52px;
+  opacity: 0.92;
+  filter: brightness(0) invert(1);
+}
+
+/* ── SDG Color Palette (official UN colors) ── */
+.sdg--1  { background: #e5243b; }
+.sdg--2  { background: #DDA63A; }
+.sdg--3  { background: #4C9F38; }
+.sdg--4  { background: #C5192D; }
+.sdg--5  { background: #FF3A21; }
+.sdg--6  { background: #26BDE2; }
+.sdg--7  { background: #FCC30B; }
+.sdg--8  { background: #A21942; }
+.sdg--9  { background: #FD6925; }
+.sdg--10 { background: #DD1367; }
+.sdg--11 { background: #FD9D24; }
+.sdg--12 { background: #BF8B2E; }
+.sdg--13 { background: #3F7E44; }
+.sdg--14 { background: #0A97D9; }
+.sdg--15 { background: #56C02B; }
+.sdg--16 { background: #00689D; }
+.sdg--17 { background: #19486A; }
+
+/* ── View All Button ── */
+.sdg-cta-wrap {
   text-align: center;
-
-  padding: 12px;
-
-  background: rgba(0,0,0,0.15);
-
-  opacity: 0;
-  transition: all 0.3s ease;
-
-  transform: scale(1.1);
+  margin-top: 28px;
 }
 
-.goal-overlay span {
-  color: white;
-  font-size: 13px;
-  font-weight: 600;
-  line-height: 1.4;
+.sdg-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #2e7d32;
+  color: #2e7d32;
+  background: transparent;
+  border-radius: 24px;
+  padding: 10px 26px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  cursor: pointer;
 }
 
-.goal-card:hover .goal-overlay {
-  opacity: 1;
-  transform: scale(1);
+.sdg-cta-btn:hover {
+  background: #2e7d32;
+  color: #fff;
 }
 
-.goal-card:hover .goal-number {
-  opacity: 0;
+.sdg-cta-btn svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
 }
 
-/* TABLET */
-
-@media (max-width: 992px) {
-  .goal-heading {
-    font-size: 44px;
-  }
-
-  .goal-description {
-    font-size: 17px;
-  }
-
-  .goal-card {
-    width: 120px;
-    height: 120px;
-  }
+.sdg-cta-btn:hover svg {
+  transform: translateX(3px);
 }
 
-/* MOBILE */
-
-@media (max-width: 576px) {
-
-  .goal-section {
-    padding: 60px 0;
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .sdg-section {
+    padding: 36px 0 32px;
   }
 
-  .goal-heading {
-    font-size: 32px;
+  .sdg-card {
+    width: 100px;
+    height: 100px;
+    padding: 8px 8px 8px;
   }
 
-  .goal-description {
-    font-size: 15px;
+  .sdg-card__number {
+    font-size: 1.35rem;
   }
 
-  .goal-grid {
+  .sdg-card__label {
+    font-size: 0.4rem;
+  }
+
+  .sdg-card__icon svg,
+  .sdg-card__icon img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .sdg-marquee-track {
     gap: 10px;
+    animation-duration: 30s;
+  }
+}
+
+@media (max-width: 480px) {
+  .sdg-card {
+    width: 86px;
+    height: 86px;
+    padding: 7px;
   }
 
-  .goal-card {
-    width: 80px;
-    height: 80px;
-    border-radius: 10px;
+  .sdg-card__number {
+    font-size: 1.15rem;
   }
 
-  .goal-number {
-    font-size: 16px;
+  .sdg-card__label {
+    font-size: 0.35rem;
   }
 
-  .goal-overlay span {
-    font-size: 9px;
-    line-height: 1.2;
+  .sdg-card__icon svg,
+  .sdg-card__icon img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .sdg-marquee-track {
+    gap: 8px;
+    animation-duration: 24s;
+  }
+
+  .sdg-marquee-wrapper::before,
+  .sdg-marquee-wrapper::after {
+    width: 40px;
   }
 }

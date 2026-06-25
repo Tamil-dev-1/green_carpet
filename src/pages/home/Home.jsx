@@ -8,11 +8,14 @@ import CTA2 from '../../components/cta2/CTA2'
 import WomenRise from '../../components/womenRise/WomenRise'
 import Newsroom from '../../components/news_room/NewsRoom'
 // import EducationGallery from '../../components/gallery_marquee/EducationGallery'
-import ImgCarousel from '../../components/imgCarousel/ImgCarousel'
+// import ImgCarousel from '../../components/imgCarousel/ImgCarousel'
 import SDG from '../../components/sdg_goals/SDG'
-import Chairman from '../../components/chairman/Chairman'
+// import Chairman from '../../components/chairman/Chairman'
 import GetInvolved from '../../components/getInvolved/GetInvolved'
 import Partners from '../../components/partners/Partners'
+import HeroSection3 from '../../components/herosection3/HeroSection3'
+// import HeroSection from '../../components/herosection2/HeroSection'
+
 // getInvlovedImge part
 // import heroBg from './assets/your-banner.jpg';
 
@@ -20,18 +23,20 @@ import Partners from '../../components/partners/Partners'
 const Home = () => {
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
+      {/* <HeroSection /> */}
+      <HeroSection3 />
       <About />
       <WhoWe />
       <ClimateChange />
       <ClimateCTA />
-      <ImgCarousel />
+      {/* <ImgCarousel /> */}
       <WomenRise />
       <CTA2 />
       <Newsroom />
       {/* <EducationGallery /> */}
       <SDG />
-      <Chairman />
+      {/* <Chairman /> */}
       <GetInvolved />
       {/* <GetInvolved /><CommunitySection bannerImage={heroBg} /> */}
       <Partners />
@@ -39,4 +44,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

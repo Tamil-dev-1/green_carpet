@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import "./hero.css";
-import Img1 from "../../assets/images/hero/img1.jpg";
-import Img4 from "../../assets/images/hero/img4.jpg";
+// import Img1 from "../../assets/images/hero/img1.jpg";
+// import Img4 from "../../assets/images/hero/img4.jpg";
 
 const destinations = [
   {
@@ -9,7 +9,7 @@ const destinations = [
     title: "LOREM ",
     subtitle: "IPSUM",
     desc: "Discover dramatic landscapes and serene beauty.",
-    img: Img1,
+    // img: ,
   },
   {
     id: 1,
@@ -30,7 +30,7 @@ const destinations = [
     title: "LOREM ",
     subtitle: "IPSUM",
     desc: "Find peace in the lush terraces and tropical beaches.",
-    img: Img4,
+    // img: ,
   },
 ];
 
