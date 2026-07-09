@@ -50,7 +50,7 @@ export default function JoinMovement() {
         .join-title {
           color: white;
           font-weight: 800;
-          font-size: clamp(2.5rem, 4.5vw, 4rem);
+          font-size: clamp(1.5rem, 2.5vw, 3rem);
           line-height: 1.05;
           letter-spacing: -2px;
           margin-bottom: 28px;
@@ -118,7 +118,7 @@ export default function JoinMovement() {
           }
 
           .join-title {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             line-height: 1.15;
             letter-spacing: -1px;
           }
@@ -172,3 +172,5 @@ export default function JoinMovement() {
     </>
   );
 }
+
+

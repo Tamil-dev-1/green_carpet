@@ -54,7 +54,7 @@ function LinkItem({ icon, title, desc, cta, href }) {
    and pass bannerImage={heroBg}
 ──────────────────────────────────────────── */
 export default function GetInvolved({ bannerImage }) {
-  const bg = bannerImage || "https://images.pexels.com/photos/8875363/pexels-photo-8875363.jpeg";
+  const bg = bannerImage || "https://images.pexels.com/photos/32221016/pexels-photo-32221016.jpeg";
 
   return (
     <section

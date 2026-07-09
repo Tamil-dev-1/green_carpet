@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LogoImg from '../../assets/images/hero/gclogo.png'
 
 const NAV_LINKS = [
   {
@@ -129,15 +130,16 @@ export default function Navbar() {
           align-items: center;
           gap: 8px;
           text-decoration: none;
-          font-size: 26px;
-          font-weight: 700;
-          color: #1a1a1a;
-          letter-spacing: -0.5px;
           flex-shrink: 0;
         }
-        .dnx-navbar__logo-icon {
-          width: 34px;
-          height: 34px;
+        .dnx-navbar__logo-img {
+          height: 60px;
+          width: auto;
+          display: block;
+          object-fit: contain;
+           filter: brightness(1.1)
+            filter: saturate(1.5);
+            filter: contrast(1.2);
         }
 
         /* ── Desktop Nav Links ── */
@@ -398,7 +400,7 @@ export default function Navbar() {
         @media (max-width: 575px) {
           .dnx-topbar__right .dnx-topbar__follow-label { display: none; }
           .dnx-navbar__inner { padding: 0 16px; }
-          .dnx-navbar__logo { font-size: 22px; }
+          .dnx-navbar__logo-img { height: 36px; }
           .dnx-navbar__icon-btn { width: 38px; height: 38px; }
         }
       `}</style>
@@ -447,7 +449,7 @@ export default function Navbar() {
               </svg>
             </a>
             {/* LinkedIn */}
-            <a href="#" className="dnx-topbar__social-link" aria-label="LinkedIn">
+            <a href="#" className="dnx-topbar__social-link" aria-lazbel="LinkedIn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
                 <rect x="2" y="9" width="4" height="12"/>
@@ -463,12 +465,11 @@ export default function Navbar() {
         <div className="dnx-navbar__inner">
           {/* Logo */}
           <a href="#" className="dnx-navbar__logo">
-            <svg className="dnx-navbar__logo-icon" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17 4C10 4 5 10 5 16c0 4 2 7 5 9l7 5 7-5c3-2 5-5 5-9 0-6-5-12-12-12z" fill="#2d7a3a" opacity="0.85"/>
-              <path d="M12 14c1-3 3-5 5-6 2 1 4 3 5 6" stroke="#e85d26" strokeWidth="2.2" strokeLinecap="round"/>
-              <path d="M17 8v14" stroke="#e85d26" strokeWidth="2.2" strokeLinecap="round"/>
-            </svg>
-            Green Carpet
+            <img
+              src={LogoImg}
+              alt="Green Carpet Logo"
+              className="dnx-navbar__logo-img"
+            />
           </a>
 
           {/* Desktop Nav Links */}
@@ -505,13 +506,6 @@ export default function Navbar() {
                 <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
               </svg>
             </button>
-            {/* <button className="dnx-navbar__icon-btn dnx-navbar__icon-btn--cart" aria-label="Cart">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-              </svg>
-              <span className="dnx-navbar__cart-badge">2</span>
-            </button> */}
             <button className="dnx-navbar__donate-btn">
               ♥ Donate Now
             </button>

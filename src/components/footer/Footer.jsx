@@ -5,6 +5,10 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { MdAttachEmail } from "react-icons/md";
+
+
 
 export default function Footer() {
   return (
@@ -26,17 +30,17 @@ export default function Footer() {
                 </p>
 
                 <div className="contact-row">
-                  <span className="icon">✆</span>
+                  <span className="icon"><MdAttachEmail /></span>
                   <span>info@greencarpet.org</span>
                 </div>
 
                 <div className="contact-row">
-                  <span className="icon">✆</span>
+                  <span className="icon"><FaPhoneAlt /></span>
                   <span>+1 234 567 8900</span>
                 </div>
 
                 <div className="contact-row">
-                  <span className="icon">✆</span>
+                  <span className="icon"><FaPhoneAlt /></span>
                   <span>+1 234 567 8910</span>
                 </div>
 
@@ -132,6 +136,7 @@ export default function Footer() {
       </div>
 
       {/* COPYRIGHT */}
+      
       <div className="footer-bottom">
         <div className="container">
           <p>
