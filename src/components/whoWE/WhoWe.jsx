@@ -8,7 +8,7 @@ const IMG_WHO = "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=
 // Card 2: community meeting / women studying
 const IMG_WHAT = "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=600&q=80";
 // Card 3: rural / candlelight scene
-const IMG_WHERE = "https://images.unsplash.com/photo-1504006833117-8886a355efbf?w=600&q=80";
+const IMG_WHERE = "https://images.pexels.com/photos/32214031/pexels-photo-32214031.jpeg";
 
 const cards = [
   {

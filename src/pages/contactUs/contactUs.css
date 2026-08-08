@@ -1,0 +1,265 @@
+/* =========================================================
+   Contact Us Page Styles
+   Works alongside Bootstrap 5 (grid / form-control / etc.)
+   ========================================================= */
+
+:root {
+  --teal-dark: #0d3b3e;
+  --teal-mid: #14555a;
+  --teal-accent: #1f7a80;
+  --cream-bg: #f5f1ea;
+  --yellow-btn: #f4c744;
+  --yellow-btn-hover: #e0b52f;
+  --text-muted-gray: #6c757d;
+  --card-radius: 10px;
+}
+
+/* ---------- Page wrapper ---------- */
+.contact-us-page {
+  background-color: var(--cream-bg);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ---------- Heading ---------- */
+.contact-heading {
+  color: var(--teal-dark);
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-subheading {
+  color: var(--text-muted-gray);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* ---------- Contact Address Card ---------- */
+.contact-address-card {
+  background-color: #ffffff;
+  border-radius: var(--card-radius);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.address-title {
+  color: var(--teal-dark);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.address-line {
+  color: #333;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.queries-label {
+  color: var(--teal-dark);
+  font-size: 0.95rem;
+}
+
+.email-line a {
+  color: var(--teal-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.email-line a:hover {
+  text-decoration: underline;
+}
+
+.icon-teal {
+  color: var(--teal-accent);
+  flex-shrink: 0;
+}
+
+/* Social icons */
+.social-img {
+  flex-wrap: wrap;
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #0D530E;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+
+.social-icon:hover {
+  background-color: #03C978;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* ---------- Get In Touch Card ---------- */
+.get-in-touch-card {
+  background-color: #ffffff;
+  border-radius: var(--card-radius);
+  padding: 2.5rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  color: var(--teal-dark);
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.form-label {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: 4px;
+  border: 1px solid #d9d9d9;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.9rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--teal-accent);
+  box-shadow: 0 0 0 0.15rem rgba(31, 122, 128, 0.2);
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+/* Captcha row */
+.captcha-row {
+  margin-top: 0.5rem;
+}
+
+.captcha-box {
+  min-width: 110px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2f2;
+  border: 1px dashed #b9c4c4;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--teal-dark);
+  text-decoration: line-through;
+  margin-top: 1.75rem;
+}
+
+.captcha-refresh-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  color: var(--teal-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.75rem;
+  transition: background-color 0.2s ease;
+}
+
+.captcha-refresh-btn:hover {
+  background-color: var(--cream-bg);
+}
+
+/* ---------- Submit button ---------- */
+.btn-submit {
+  background-color: var(--yellow-btn);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 0.65rem 2.5rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--yellow-btn-hover);
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* =========================================================
+   Responsiveness
+   ========================================================= */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .contact-address-card,
+  .get-in-touch-card {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .contact-heading {
+    font-size: 1.6rem;
+  }
+
+  .address-title,
+  .form-title {
+    font-size: 1.25rem;
+  }
+
+  .address-line {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .contact-heading {
+    font-size: 1.4rem;
+  }
+
+  .contact-subheading {
+    font-size: 0.85rem;
+  }
+
+  .contact-address-card,
+  .get-in-touch-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .social-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+
+  .captcha-box {
+    min-width: 90px;
+    height: 42px;
+    letter-spacing: 2px;
+    margin-top: 0.5rem;
+  }
+
+  .captcha-refresh-btn {
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}

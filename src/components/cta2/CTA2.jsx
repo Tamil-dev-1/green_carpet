@@ -52,7 +52,7 @@ export default function JoinMovement() {
           font-weight: 800;
           font-size: clamp(1.5rem, 2.5vw, 3rem);
           line-height: 1.05;
-          letter-spacing: -2px;
+          letter-spacing: 0px;
           margin-bottom: 28px;
         }
 

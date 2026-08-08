@@ -1,0 +1,163 @@
+/* ===== Our History section ===== */
+
+.our-history-section {
+  padding: 56px 0 64px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.our-history-heading {
+  color: #008000;
+  font-weight: 800;
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+}
+
+.our-history-subheading {
+  color: #2b2b2b;
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 36px;
+}
+
+/* ---------- Content card ---------- */
+
+.history-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  padding: 32px;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.history-image-wrap {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #eee;
+}
+
+.history-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);
+  transition: opacity 0.25s ease;
+}
+
+.history-year-title {
+  color: #008000;
+  font-weight: 800;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  margin-bottom: 18px;
+}
+
+.history-text {
+  color: #333333;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 0;
+}
+
+/* ---------- Year selector strip ---------- */
+
+.year-strip {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #d9d9d9 transparent;
+}
+
+.year-strip::-webkit-scrollbar {
+  height: 6px;
+}
+
+.year-strip::-webkit-scrollbar-thumb {
+  background: #d9d9d9;
+  border-radius: 4px;
+}
+
+.year-item {
+  flex: 0 0 auto;
+  background: none;
+  border: none;
+  border-bottom: 3px solid #008000;
+  padding: 8px 6px 10px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.year-item:hover {
+  color: #c2185b;
+}
+
+.year-item:focus-visible {
+  outline: 2px solid #008000;
+  outline-offset: 2px;
+}
+
+.year-item.active {
+  background: #008000;
+  color: #ffffff;
+  border-radius: 4px;
+  border-color: #008000;
+}
+
+/* ===== Responsiveness ===== */
+
+@media (max-width: 767.98px) {
+  .our-history-heading {
+    font-size: 1.6rem;
+  }
+
+  .our-history-subheading {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+  }
+
+  .history-card {
+    padding: 20px;
+  }
+
+  .history-year-title {
+    font-size: 1.15rem;
+  }
+
+  .history-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .our-history-section {
+    padding: 40px 0 48px;
+  }
+
+  .history-card {
+    padding: 16px;
+    border-radius: 10px;
+  }
+
+  .year-strip {
+    gap: 14px;
+    justify-content: flex-start;
+  }
+
+  .year-item {
+    font-size: 0.85rem;
+    padding: 6px 5px 8px;
+  }
+}

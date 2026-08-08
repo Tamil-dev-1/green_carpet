@@ -1,0 +1,139 @@
+/* ==========================================================================
+   MissionVision.css
+   Two alternating "image + text" rows (Mission / Vision), built on top of
+   Bootstrap's grid. This file only holds the custom visual treatment.
+   ========================================================================== */
+
+.mv-section {
+  padding: 4rem 0;
+  background-color: #ffffff;
+}
+
+.mv-row {
+  display: flex;
+  align-items: center;
+}
+
+.mv-row + .mv-row {
+  margin-top: 4.5rem;
+}
+
+/* -------------------------------------------------- badge / eyebrow */
+.mv-badge {
+  display: inline-block;
+  background-color: #008000;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+
+/* -------------------------------------------------- text block */
+.mv-title {
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+}
+
+.mv-text {
+  color: #5b6472;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 34rem;
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------- single hero-style image */
+.mv-image-single {
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.mv-image-single img {
+  width: 100%;
+  height: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* -------------------------------------------------- 4-panel collage image */
+.mv-collage {
+  display: flex;
+  width: 100%;
+  height: 340px;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.mv-collage img {
+  flex: 1 1 25%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-width: 0;
+}
+
+/* ==========================================================================
+   Responsiveness
+   ========================================================================== */
+
+/* Tablets */
+@media (max-width: 991.98px) {
+  .mv-section {
+    padding: 3rem 0;
+  }
+  .mv-row + .mv-row {
+    margin-top: 3rem;
+  }
+  .mv-collage {
+    height: 280px;
+  }
+}
+
+/* Stack image and text vertically on small screens.
+   Bootstrap's .flex-column-reverse / order utilities handle which
+   block (image vs text) appears first for each row — see JSX. */
+@media (max-width: 767.98px) {
+  .mv-image-single img {
+    max-height: 300px;
+  }
+  .mv-collage {
+    height: 220px;
+  }
+  .mv-title {
+    font-size: 1.5rem;
+  }
+  .mv-text {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .mv-section {
+    padding: 2.5rem 0;
+  }
+  .mv-row + .mv-row {
+    margin-top: 2.25rem;
+  }
+  .mv-collage {
+    height: 170px;
+    border-radius: 1rem;
+  }
+  .mv-image-single {
+    border-radius: 1rem;
+  }
+  .mv-badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.9rem;
+  }
+}

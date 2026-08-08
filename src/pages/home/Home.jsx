@@ -10,7 +10,7 @@ import Newsroom from '../../components/news_room/NewsRoom'
 // import EducationGallery from '../../components/gallery_marquee/EducationGallery'
 // import ImgCarousel from '../../components/imgCarousel/ImgCarousel'
 import SDG from '../../components/sdg_goals/SDG'
-// import Chairman from '../../components/chairman/Chairman'
+import Chairman from '../../components/chairman/Chairman'
 import GetInvolved from '../../components/getInvolved/GetInvolved'
 import Partners from '../../components/partners/Partners'
 import HeroSection3 from '../../components/herosection3/HeroSection3'
@@ -36,7 +36,7 @@ const Home = () => {
       <Newsroom />
       {/* <EducationGallery /> */}
       <SDG />
-      {/* <Chairman /> */}
+      <Chairman />
       <GetInvolved />
       {/* <GetInvolved /><CommunitySection bannerImage={heroBg} /> */}
       <Partners />

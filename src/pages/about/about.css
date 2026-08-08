@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Hero.css — "Change Today... Change Tomorrow." banner
+   Uses Bootstrap 5 for grid/utility classes; this file only holds the
+   custom visual treatment that Bootstrap doesn't provide out of the box.
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #2b2b2b; /* fallback while image loads */
+  background-image: var(--hero-bg-image, url("https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1900&auto=format&fit=crop"));
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+/* Dark-to-transparent gradient so the left-aligned text stays readable
+   over any photo, matching the reference banner. */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.75) 22%,
+    rgba(0, 0, 0, 0.35) 45%,
+    rgba(0, 0, 0, 0) 65%
+  );
+  z-index: 1;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Eyebrow / kicker pill — "ABOUT US" */
+.hero__badge {
+  display: inline-block;
+  background-color: #008000; /* green */
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 1.25rem;
+}
+
+.hero__title {
+  color: #ffffff;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 0.25rem;
+  font-size: clamp(1.9rem, 4.5vw, 3.25rem);
+}
+
+.hero__title--accent {
+  display: block;
+  color: #008000;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  margin-top: 0.15rem;
+}
+
+/* ==========================================================================
+   Responsiveness
+   ========================================================================== */
+
+/* Large tablets / small laptops */
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: 420px;
+  }
+  .hero__overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.8) 35%,
+      rgba(0, 0, 0, 0.45) 60%,
+      rgba(0, 0, 0, 0.1) 100%
+    );
+  }
+}
+
+/* Tablets */
+@media (max-width: 767.98px) {
+  .hero {
+    min-height: 380px;
+    background-position: center 20%;
+  }
+  .hero__content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  .hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.75) 55%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+  }
+}
+
+/* Phones */
+@media (max-width: 575.98px) {
+  .hero {
+    min-height: 340px;
+  }
+  .hero__badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.9rem;
+  }
+  .hero__title,
+  .hero__title--accent {
+    font-size: 1.6rem;
+  }
+  .hero__content {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+/* Respect reduced-motion / high contrast preferences */
+@media (prefers-reduced-motion: reduce) {
+  .hero * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

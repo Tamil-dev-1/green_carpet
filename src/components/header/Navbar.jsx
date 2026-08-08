@@ -1,29 +1,89 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import LogoImg from '../../assets/images/hero/gclogo.png'
 
 const NAV_LINKS = [
   {
     label: "Home",
     hasDropdown: true,
-    items: ["Home 1", "Home 2", "Home 3"],
+    items: [
+      { label: "Home 1", path: "/" },
+      { label: "Home 2", path: "/home-2" },
+      { label: "Home 3", path: "/home-3" },
+    ],
   },
-  { label: "About Us", hasDropdown: false },
+  { label: "About Us", hasDropdown: false, path: "/about" },
   {
     label: "Donations",
     hasDropdown: true,
-    items: ["Donate Now", "Campaigns", "Fundraisers"],
+    items: [
+      { label: "Donate Now", path: "/donate" },
+      { label: "Campaigns", path: "/campaigns" },
+      { label: "Fundraisers", path: "/fundraisers" },
+    ],
   },
   {
     label: "Pages",
     hasDropdown: true,
-    items: ["Gallery", "Team", "Testimonials", "FAQ"],
+    items: [
+      { label: "Gallery", path: "/gallery" },
+      { label: "Team", path: "/team" },
+      { label: "Testimonials", path: "/testimonials" },
+      { label: "FAQ", path: "/faq" },
+    ],
   },
   {
     label: "Blog",
     hasDropdown: true,
-    items: ["Blog Grid", "Blog List", "Blog Details"],
+    items: [
+      { label: "Blog Grid", path: "/blog-grid" },
+      { label: "Blog List", path: "/blog-list" },
+      { label: "Blog Details", path: "/blog-details" },
+    ],
   },
-  { label: "Contact Us", hasDropdown: false },
+  { label: "Contact Us", hasDropdown: false, path: "/contactus" },
+];
+
+const SOCIAL_LINKS = [
+  {
+    label: "Facebook",
+    href: "https://facebook.com",
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Twitter",
+    href: "https://twitter.com",
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+      </svg>
+    ),
+  },
+  {
+    label: "YouTube",
+    href: "https://youtube.com",
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+        <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white" />
+      </svg>
+    ),
+  },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com",
+    icon: (
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
 ];
 
 const COLORS = {
@@ -168,6 +228,7 @@ export default function Navbar() {
           gap: 5px;
           transition: color 0.2s, background 0.2s;
           white-space: nowrap;
+          text-decoration: none;
         }
         .dnx-navbar__menu-btn:hover {
           color: ${COLORS.primary};
@@ -280,6 +341,7 @@ export default function Navbar() {
           gap: 7px;
           transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
           white-space: nowrap;
+          text-decoration: none;
         }
         .dnx-navbar__donate-btn:hover {
           background: #d44d1c;
@@ -351,6 +413,7 @@ export default function Navbar() {
           justify-content: space-between;
           align-items: center;
           transition: color 0.15s;
+          text-decoration: none;
         }
         .dnx-mobile-menu__btn:hover { color: ${COLORS.primary}; }
         .dnx-mobile-menu__dropdown {
@@ -387,6 +450,7 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           gap: 7px;
+          text-decoration: none;
         }
 
         /* ── Responsive ── */
@@ -423,39 +487,25 @@ export default function Navbar() {
                 <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                 <circle cx="12" cy="10" r="3"/>
               </svg>
-              Rd. Santa Ana, Illinois 85486, United States
+              No.1, Iyer Hospital Road,Singanallur Post, Coimbatore, Tamil Nadu - 641005,India.
             </span>
           </div>
           <div className="dnx-topbar__right">
             <span className="dnx-topbar__follow-label">Follow Us</span>
             <span className="dnx-topbar__divider" />
-            {/* Facebook */}
-            <a href="#" className="dnx-topbar__social-link" aria-label="Facebook">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-              </svg>
-            </a>
-            {/* Twitter/X */}
-            <a href="#" className="dnx-topbar__social-link" aria-label="Twitter">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
-              </svg>
-            </a>
-            {/* YouTube */}
-            <a href="#" className="dnx-topbar__social-link" aria-label="YouTube">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
-                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/>
-              </svg>
-            </a>
-            {/* LinkedIn */}
-            <a href="#" className="dnx-topbar__social-link" aria-lazbel="LinkedIn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                <rect x="2" y="9" width="4" height="12"/>
-                <circle cx="4" cy="4" r="2"/>
-              </svg>
-            </a>
+            {/* Social links stay as plain external anchors (react-router Link is for in-app routes only) */}
+            {SOCIAL_LINKS.map((social) => (
+              <a
+                key={social.label}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="dnx-topbar__social-link"
+                aria-label={social.label}
+              >
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
       </div>
@@ -464,13 +514,13 @@ export default function Navbar() {
       <nav className="dnx-navbar">
         <div className="dnx-navbar__inner">
           {/* Logo */}
-          <a href="#" className="dnx-navbar__logo">
+          <Link to="/" className="dnx-navbar__logo">
             <img
               src={LogoImg}
               alt="Green Carpet Logo"
               className="dnx-navbar__logo-img"
             />
-          </a>
+          </Link>
 
           {/* Desktop Nav Links */}
           <ul className="dnx-navbar__menu">
@@ -481,17 +531,23 @@ export default function Navbar() {
                 onMouseEnter={() => link.hasDropdown && setOpenDropdown(link.label)}
                 onMouseLeave={() => setOpenDropdown(null)}
               >
-                <button
-                  className="dnx-navbar__menu-btn"
-                  onClick={() => link.hasDropdown && toggleDropdown(link.label)}
-                >
-                  {link.label}
-                  {link.hasDropdown && <span className="dnx-navbar__chevron">▾</span>}
-                </button>
+                {link.hasDropdown ? (
+                  <button
+                    className="dnx-navbar__menu-btn"
+                    onClick={() => toggleDropdown(link.label)}
+                  >
+                    {link.label}
+                    <span className="dnx-navbar__chevron">▾</span>
+                  </button>
+                ) : (
+                  <Link to={link.path} className="dnx-navbar__menu-btn">
+                    {link.label}
+                  </Link>
+                )}
                 {link.hasDropdown && (
                   <div className="dnx-navbar__dropdown">
                     {link.items.map((item) => (
-                      <a href="#" key={item}>{item}</a>
+                      <Link to={item.path} key={item.label}>{item.label}</Link>
                     ))}
                   </div>
                 )}
@@ -506,9 +562,9 @@ export default function Navbar() {
                 <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
               </svg>
             </button>
-            <button className="dnx-navbar__donate-btn">
+            <Link to="/donate" className="dnx-navbar__donate-btn">
               ♥ Donate Now
-            </button>
+            </Link>
             {/* Hamburger */}
             <button
               className={`dnx-navbar__hamburger${menuOpen ? " dnx-navbar__hamburger--active" : ""}`}
@@ -528,21 +584,31 @@ export default function Navbar() {
           <div className="dnx-mobile-menu__inner">
             {NAV_LINKS.map((link) => (
               <div className="dnx-mobile-menu__item" key={link.label}>
-                <button
-                  className="dnx-mobile-menu__btn"
-                  onClick={() => link.hasDropdown && toggleDropdown(link.label)}
-                >
-                  {link.label}
-                  {link.hasDropdown && (
+                {link.hasDropdown ? (
+                  <button
+                    className="dnx-mobile-menu__btn"
+                    onClick={() => toggleDropdown(link.label)}
+                  >
+                    {link.label}
                     <span style={{ fontSize: 12, opacity: 0.5 }}>
                       {openDropdown === link.label ? "▴" : "▾"}
                     </span>
-                  )}
-                </button>
+                  </button>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className="dnx-mobile-menu__btn"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                )}
                 {link.hasDropdown && (
                   <div className={`dnx-mobile-menu__dropdown${openDropdown === link.label ? " dnx-mobile-menu__dropdown--open" : ""}`}>
                     {link.items.map((item) => (
-                      <a href="#" key={item}>{item}</a>
+                      <Link to={item.path} key={item.label} onClick={() => setMenuOpen(false)}>
+                        {item.label}
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -554,14 +620,9 @@ export default function Navbar() {
                   <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
                 </svg>
               </button>
-              <button className="dnx-navbar__icon-btn dnx-navbar__icon-btn--cart" aria-label="Cart" style={{ position: "relative" }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
-                  <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-                </svg>
-                <span className="dnx-navbar__cart-badge">2</span>
-              </button>
-              <button className="dnx-mobile-menu__donate-btn">♥ Donate Now</button>
+              <Link to="/donate" className="dnx-mobile-menu__donate-btn" onClick={() => setMenuOpen(false)}>
+                ♥ Donate Now
+              </Link>
             </div>
           </div>
         </div>
